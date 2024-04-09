@@ -7,8 +7,8 @@
     "allowImportingTsExtensions": true,
     "checkJs": false,
     "experimentalDecorators": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true
+    "strictNullChecks": false,
+    "strictFunctionTypes": false
   },
   "exclude": ["node_modules", "**/node_modules/*"]
 }

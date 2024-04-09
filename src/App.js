@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
     if (cookie["word"] == undefined) {
-      //loadResource();
+      loadResource();
     }
   }, []);
   return (

@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { useCookies } from "react-cookie";
 
 const CustomThemeContext = React.createContext();
 
@@ -62,6 +63,7 @@ const lightTheme = {
 
 export function CustomThemeProvider({ children }) {
   const [dark, setDark] = React.useState(false);
+  const [cookie, setCookie] = useCookies(["theme"]);
 
   function toggleTheme() {
     if (dark === true) {
