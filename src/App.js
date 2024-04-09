@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
-import "./App.css";
+import Theme from "./components/Theme";
 
 function App() {
   const [cookie, setCookie] = useCookies();
@@ -27,12 +27,18 @@ function App() {
 
   useEffect(() => {
     if (cookie["word"] == undefined) {
-      loadResource();
+      //loadResource();
     }
   }, []);
   return (
     <div className="App">
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div className="Header">
+        <Theme />
+      </div>
+      <div>
+        <h1 className="text-3xl font-bold underline">Main part of the app</h1>
+      </div>
     </div>
   );
 }
