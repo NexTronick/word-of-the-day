@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/word-of-the-day/static/css/main.0c7c468e.css",
+    "main.js": "/word-of-the-day/static/js/main.241524d6.js",
+    "index.html": "/word-of-the-day/index.html",
+    "main.0c7c468e.css.map": "/word-of-the-day/static/css/main.0c7c468e.css.map",
+    "main.241524d6.js.map": "/word-of-the-day/static/js/main.241524d6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c7c468e.css",
+    "static/js/main.241524d6.js"
+  ]
+}
