@@ -16,7 +16,7 @@ export default function Theme() {
   const handleToggle = () => {
     toggleTheme();
     //console.log(window.location.pathname);
-    setCookie("theme", theme, {
+    setCookie("theme", theme === "light" ? "dark" : "light", {
       path: window.location.pathname,
       expires: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
       maxAge: 365 * 24 * 60 * 60 * 1000,
