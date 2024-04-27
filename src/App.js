@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
-import axios from "axios";
-import "./App.css";
-import { stringify } from "postcss";
-import { Button, Card } from "react-bootstrap";
-import { redirect } from "next/dist/server/api-utils";
 import { getRandomWordWithDictionary } from "./util/Word";
 import Theme from "./components/Theme";
 
