@@ -8,7 +8,13 @@ export const getRandomWordWithDictionary = async () => {
     alert("Error in getting an Random Word! Please referesh the page.");
     return;
   }
-
+  if (
+    response.data[0].message !== undefined ||
+    response.data.message !== undefined
+  ) {
+    alert("Error in getting an Random Word! Please referesh the page.");
+    return;
+  }
   console.log(response.data);
   return response.data;
 };
