@@ -6,6 +6,7 @@ import { stringify } from "postcss";
 import { Button, Card } from "react-bootstrap";
 import { redirect } from "next/dist/server/api-utils";
 import { getRandomWordWithDictionary } from "./util/Word";
+import Theme from "./components/Theme";
 
 function App() {
   const [cookie, setCookie] = useCookies();
@@ -62,17 +63,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world! {word}</h1>
-      <div className="container">
-        <h1>Dictionary Search</h1>
-        {word && (
-          <Card className="mt-4">
-            <Card.Body>
-              <Card.Title>{word}</Card.Title>
-              <Card.Text>{definition}</Card.Text>
-            </Card.Body>
-          </Card>
-        )}
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div className="Header">
+        <Theme />
+      </div>
+      <div>
+        <h1 className="text-3xl font-bold underline">Main part of the app</h1>
+        <p>Word: {word}</p>
+        <p>Definition: {definition}</p>
       </div>
     </div>
   );

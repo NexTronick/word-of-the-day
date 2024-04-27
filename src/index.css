@@ -15,3 +15,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.main {
+  background-color: #152b38;
+  color: #65c5c7;
+  /*65C5C7*/
+}
