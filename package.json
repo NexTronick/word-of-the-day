@@ -1,6 +1,6 @@
 {
   "name": "word-of-the-day",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://nextronick.github.io/word-of-the-day",
   "private": true,
   "dependencies": {
