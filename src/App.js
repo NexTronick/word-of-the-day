@@ -5,8 +5,7 @@ import Theme from "./components/Theme";
 
 function App() {
   const [cookie, setCookie] = useCookies();
-  const [word, setWord] = useState("");
-  const [definition, setDefinition] = useState("");
+  const [random, setRandom] = useState();
 
   const loadResource = async () => {
     // const response = await axios.get(
@@ -38,16 +37,15 @@ function App() {
 
     const random = await getRandomWordWithDictionary();
     if (random == null) {
-      window.location.reload();
+      return;
     }
-    setWord(random[0].word);
-    setDefinition(random[0].meanings[0].definitions[0].definition);
+    setRandom(random[0]);
   };
 
   const wordDefined = () => {
-    const wordDetails = JSON.parse(cookie["wordDetails"]);
-    setWord(wordDetails.word);
-    setDefinition(wordDetails.definition);
+    //const wordDetails = JSON.parse(cookie["wordDetails"]);
+    // setWord(wordDetails.word);
+    // setDefinition(wordDetails.definition);
   };
 
   useEffect(() => {
@@ -55,7 +53,7 @@ function App() {
       console.log(cookie["wordDetails"]);
       loadResource();
     } else {
-      wordDefined();
+      //wordDefined();
     }
   }, []);
 
@@ -67,8 +65,21 @@ function App() {
       </div>
       <div>
         <h1 className="text-3xl font-bold underline">Main part of the app</h1>
-        <p>Word: {word}</p>
-        <p>Definition: {definition}</p>
+        {random == undefined ? (
+          ""
+        ) : (
+          <div>
+            <p>Word: {random.word}</p>
+            {random.meanings.map((meaning) => {
+              let print;
+              print += <p>Part of Speech: {meaning.partOfSpeech}</p>;
+              meaning.definitions.map((definitions) => {
+                print += <p>definition: {definitions.definition}</p>;
+              });
+            })}
+            <p>Definition: {random.meanings[0].definitions[0].definition}</p>
+          </div>
+        )}
       </div>
     </div>
   );
