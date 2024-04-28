@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/word-of-the-day/static/css/main.3822b846.css",
-    "main.js": "/word-of-the-day/static/js/main.96c0a4eb.js",
+    "main.js": "/word-of-the-day/static/js/main.8b5e0ba4.js",
     "index.html": "/word-of-the-day/index.html",
     "main.3822b846.css.map": "/word-of-the-day/static/css/main.3822b846.css.map",
-    "main.96c0a4eb.js.map": "/word-of-the-day/static/js/main.96c0a4eb.js.map"
+    "main.8b5e0ba4.js.map": "/word-of-the-day/static/js/main.8b5e0ba4.js.map"
   },
   "entrypoints": [
     "static/css/main.3822b846.css",
-    "static/js/main.96c0a4eb.js"
+    "static/js/main.8b5e0ba4.js"
   ]
 }
