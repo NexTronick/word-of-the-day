@@ -37,6 +37,9 @@ function App() {
     // });
 
     const random = await getRandomWordWithDictionary();
+    if (random == null) {
+      window.location.reload();
+    }
     setWord(random[0].word);
     setDefinition(random[0].meanings[0].definitions[0].definition);
   };

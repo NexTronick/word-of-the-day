@@ -6,14 +6,18 @@ export const getRandomWordWithDictionary = async () => {
 
   if (response.status !== 200) {
     alert("Error in getting an Random Word! Please referesh the page.");
-    return;
+    console.log("Error in getting an Random Word! Please referesh the page.");
+    return null;
   }
   if (
     response.data[0].message !== undefined ||
     response.data.message !== undefined
   ) {
     alert("Error in getting an Random Word! Please referesh the page.");
-    return;
+    console.log(
+      "Error in getting an Random Word! Please referesh the page. Wrong Word!"
+    );
+    return null;
   }
   console.log(response.data);
   return response.data;
